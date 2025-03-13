@@ -74,3 +74,6 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 highlight Normal guibg=NONE ctermbg=NONE
 highlight NonText guibg=NONE ctermbg=NONE
 
+
+set number
+
