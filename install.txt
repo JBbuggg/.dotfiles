@@ -125,3 +125,31 @@ sudo usermod -aG dialout,plugdev $(whoami)
 
 STM32_Programmer_CLI -c port=SWD -d firmware.bin 0x08000000 -v -rst
 
+### setting touchpad 
+xinput list
+
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo nvim /etc/X11/xorg.conf.d/40-touchpad.conf
+add "
+Section "InputClass"
+    Identifier "Touchpad"
+    MatchIsTouchpad "on"
+    Driver "libinput"
+
+    # เปิด Tap-to-click
+    Option "Tapping" "on"
+
+    # เปิด Natural Scrolling (เหมือน Windows)
+    Option "NaturalScrolling" "on"
+
+    # เปิด Two-finger Scrolling
+    Option "ScrollMethod" "twofinger"
+
+    # ปิด Acceleration (ทำให้การลากเมาส์นิ่งขึ้น)
+    Option "AccelProfile" "flat"
+
+    # เพิ่มความเร็วเมาส์ (ค่ามีช่วง -1.0 ถึง 1.0)
+    Option "AccelSpeed" "0.5"
+EndSection
+"
+
