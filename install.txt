@@ -64,5 +64,24 @@ cmake ..
 make -j$(nproc)
 sudo make install
 
+### install i3 gap
+sudo apt remove -y i3
+sudo apt update
+sudo apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev \
+  libxcb-util-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev \
+  libstartup-notification0-dev libxcb-randr0-dev libev-dev \
+  libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev \
+  libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev \
+  libxcb-shape0-dev
+
+cd ~
+git clone https://github.com/Airblader/i3.git i3-gaps
+cd i3-gaps
+git checkout gaps
+
+mkdir -p build && cd build
+meson ..
+ninja
+sudo ninja install
 
 
