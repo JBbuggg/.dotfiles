@@ -84,4 +84,11 @@ meson ..
 ninja
 sudo ninja install
 
+### install rofi
+sudo apt update
+sudo apt install -y rofi
+
+### install blueman
+sudo apt update
+sudo apt install -y blueman
 
