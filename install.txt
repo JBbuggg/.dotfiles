@@ -4,4 +4,7 @@ sudo apt-get install git -y
 ### install i3wm
 sudo apt-get install i3 -y
 
-
+### install neovim v0.10.4
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install neovim
