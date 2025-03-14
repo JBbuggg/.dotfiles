@@ -5,6 +5,9 @@ set -e  # หยุดการทำงานหากมีข้อผิด�
 echo "### Updating system ###"
 sudo apt update && sudo apt upgrade -y
 
+echo "### Installing Curl ###"
+sudo apt-get install curl -y
+
 echo "### Installing i3-gaps ###"
 sudo apt remove -y i3
 sudo apt install -y meson dh-autoreconf libxcb-keysyms1-dev libpango1.0-dev \
@@ -28,6 +31,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install -y neovim xclip
 
+
 echo "### Installing Vim-Plug ###"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -37,9 +41,7 @@ curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 
 echo "### Installing Picom ###"
-sudo add-apt-repository ppa:regolith-linux/picom -y
-sudo apt update
-sudo apt install -y picom
+sudo apt-get install picom -y
 
 echo "### Installing Alacritty ###"
 sudo add-apt-repository ppa:aslatter/ppa -y
