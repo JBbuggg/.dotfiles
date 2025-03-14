@@ -92,4 +92,36 @@ sudo apt install -y rofi
 sudo apt update
 sudo apt install -y blueman
 
+### install arm-none-eabi
+download arm gnu toolchain
+cd ~/Downloads
+tar -xf arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz
+sudo mv arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi /opt/
+echo 'export PATH=$PATH:/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin' >> ~/.bashrc
+source ~/.bashrc
+
+
 ### install stm32 programmer CLI
+sudo apt update
+sudo apt install -y libusb-1.0-0
+
+download stm32cube programmer
+cd ~/Downloads
+unzip en.stm32cubeprg-lin-v2-19-0.zip
+cd STM32CubeProgrammer
+
+chmod +x SetupSTM32CubeProgrammer*.linux
+sudo ./SetupSTM32CubeProgrammer*.linux
+
+echo 'export PATH=$PATH:/usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin' >> ~/.bashrc
+source ~/.bashrc
+
+sudo cp /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/Drivers/rules/*.rules /etc/udev/rules.d/
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+sudo usermod -aG dialout,plugdev $(whoami)
+
+STM32_Programmer_CLI -c port=SWD -d firmware.bin 0x08000000 -v -rst
+
