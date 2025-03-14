@@ -1,3 +1,4 @@
+
 ### install git 
 sudo apt-get install git -y
 
@@ -37,3 +38,31 @@ sudo apt install picom
 sudo add-apt-repository ppa:aslatter/ppa
 sudo apt update
 sudo apt install alacritty
+
+### install polybar
+sudo apt update && sudo apt install -y build-essential git cmake cmake-data pkg-config \
+  python3-sphinx python3-packaging python3-markdown \
+  libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev \
+  libxcb-xinerama0-dev libxcb-util-dev libxcb1-dev libxcb-icccm4-dev \
+  libxcb-ewmh-dev libxcb-composite0-dev libxcb-cursor-dev \
+  libxrandr-dev libxcomposite-dev libxinerama-dev \
+  libxft-dev libfreetype6-dev libfontconfig1-dev \
+  libpng-dev libcurl4-openssl-dev libpulse-dev \
+  libmpdclient-dev libasound2-dev libcairo2-dev \
+  libiw-dev libnl-genl-3-dev\
+  sudo apt install -y libuv1-dev\
+  sudo apt install -y xcb-proto libxcb1-dev libxcb-util-dev libxcb-xfixes0-dev\
+  sudo apt install -y python3-xcbgen
+  sudo apt install -y libjsoncpp-dev
+
+git clone --recursive https://github.com/polybar/polybar.git
+cd polybar
+
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+sudo make install
+
+
+
