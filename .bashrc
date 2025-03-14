@@ -126,3 +126,5 @@ export PATH=$PATH:/opt/st/stm32cubeide_1.18.0
 export STM32_PRG_PATH=/home/jboe/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+. "$HOME/.cargo/env"
+export PATH=$PATH:/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin
