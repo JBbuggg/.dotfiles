@@ -5,7 +5,7 @@
 First, you need to clone your Git repository containing your dotfiles into the $HOME/.dotfiles directory. This is where your configuration files will be stored.
 
 ```bash
-git clone --bare git@github.com:user/repo.git $HOME/.dotfiles
+git clone --bare git@github.com:jeerawatboe/.dotfiles.git $HOME/.dotfiles
 ```
 
 The --bare option is important because it ensures that the repository is cloned in a bare format, which means it will not have a working directory. This setup is useful for dotfiles management because it keeps your files organized without affecting the rest of your system.
