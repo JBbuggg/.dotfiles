@@ -92,3 +92,4 @@ sudo apt install -y rofi
 sudo apt update
 sudo apt install -y blueman
 
+### install stm32 programmer CLI
