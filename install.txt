@@ -32,3 +32,8 @@ add "   #!/bin/bash
 sudo add-apt-repository ppa:regolith-linux/picom
 sudo apt update
 sudo apt install picom
+
+### install alacritty
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt update
+sudo apt install alacritty
