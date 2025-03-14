@@ -42,7 +42,7 @@ config config --local status.showUntrackedFiles no
 
 This setting ensures that Git won’t flood your terminal with untracked files, which can happen if your home directory contains other files that aren’t part of your dotfiles repository.
 
-
+### install script
 ```bash
 bash jb_install.sh
 ```
