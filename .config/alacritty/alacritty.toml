@@ -1,5 +1,23 @@
 [window]
-padding.x=10
-padding.y=10
+padding.x = 10
+padding.y = 10
+opacity = 0.8
 
-opacity=0.8
+[font]
+size = 14
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
