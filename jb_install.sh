@@ -43,6 +43,14 @@ sudo apt install -y nodejs
 echo "### Installing Picom ###"
 sudo apt-get install picom -y
 
+echo "###installing Hack Nerd Font ###"
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+unzip Hack.zip
+fc-cache -fv
+
+
 echo "### Installing Alacritty ###"
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt update
@@ -105,8 +113,22 @@ Section "InputClass"
     Option "AccelProfile" "flat"
 
     # เพิ่มความเร็วเมาส์ (ค่ามีช่วง -1.0 ถึง 1.0)
-    Option "AccelSpeed" "0.8"
+    Option "AccelSpeed" "0.1"
 EndSection
 EOL
+
+
+echo "### Installing PulseView ###"
+sudo apt-get install -y automake
+sudo apt-get install -y libudev-dev
+sudo apt-get install -y checkinstall
+sudo apt-get install -y libglib2.0-dev
+sudo apt-get install -y libftdi-dev
+sudo apt-get install -y sdcc
+sudo apt-get install -y python3-dev
+sudo apt-get install -y sigrok-firmware-fx2lafw
+sudo apt-get install -y sigrok-cli
+sudo apt-get install -y pulseview
+
 
 echo "### Installation Completed! Please Restart Your System. ###"

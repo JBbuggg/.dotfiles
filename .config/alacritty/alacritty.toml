@@ -4,7 +4,7 @@ padding.y = 10
 opacity = 0.8
 
 [font]
-size = 14
+size = 7
 
 [font.normal]
 family = "Hack Nerd Font"
