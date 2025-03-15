@@ -159,4 +159,14 @@ Section "InputClass"
     Option "AccelSpeed" "0.5"
 EndSection
 "
-
+### install pulseview 
+sudo apt-get install -y automake
+sudo apt-get install -y libudev-dev
+sudo apt-get install -y checkinstall
+sudo apt-get install -y libglib2.0-dev
+sudo apt-get install -y libftdi-dev
+sudo apt-get install -y sdcc
+sudo apt-get install -y python3-dev
+sudo apt-get install -y sigrok-firmware-fx2lafw
+sudo apt-get install -y sigrok-cli
+sudo apt-get install -y pulseview
