@@ -170,3 +170,10 @@ sudo apt-get install -y python3-dev
 sudo apt-get install -y sigrok-firmware-fx2lafw
 sudo apt-get install -y sigrok-cli
 sudo apt-get install -y pulseview
+
+### install Hack nerd font
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+unzip Hack.zip
+fc-cache -fv
