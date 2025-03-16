@@ -156,7 +156,7 @@ Section "InputClass"
     Option "AccelProfile" "flat"
 
     # เพิ่มความเร็วเมาส์ (ค่ามีช่วง -1.0 ถึง 1.0)
-    Option "AccelSpeed" "0.5"
+    Option "AccelSpeed" "1.0"
 EndSection
 "
 ### install pulseview 
@@ -177,3 +177,6 @@ cd ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
 unzip Hack.zip
 fc-cache -fv
+
+### install nitrogen
+sudo apt-get install nitrogen -y
