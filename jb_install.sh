@@ -113,7 +113,7 @@ Section "InputClass"
     Option "AccelProfile" "flat"
 
     # เพิ่มความเร็วเมาส์ (ค่ามีช่วง -1.0 ถึง 1.0)
-    Option "AccelSpeed" "0.1"
+    Option "AccelSpeed" "1.0"
 EndSection
 EOL
 
@@ -129,6 +129,9 @@ sudo apt-get install -y python3-dev
 sudo apt-get install -y sigrok-firmware-fx2lafw
 sudo apt-get install -y sigrok-cli
 sudo apt-get install -y pulseview
+
+echo "### Installing Nitrogen ###"
+sudo apt-get install nitrogen -y
 
 
 echo "### Installation Completed! Please Restart Your System. ###"
