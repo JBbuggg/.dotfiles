@@ -202,7 +202,7 @@ exec_always picom -f
 
 # polybar
 exec_always --no-startup-id killall polybar
-exec_always --no-startup-id /home/jboe/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 new_window none
 
