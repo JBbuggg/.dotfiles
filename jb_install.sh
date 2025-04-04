@@ -36,8 +36,8 @@ echo "### Installing Vim-Plug ###"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "### Installing Node.js ###"
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+echo "### Installing Latest Node.js ###"
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt install -y nodejs
 
 echo "### Installing Picom ###"
